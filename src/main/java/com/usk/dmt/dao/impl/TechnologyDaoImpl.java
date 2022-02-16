@@ -13,7 +13,12 @@ public class TechnologyDaoImpl implements TechnologyDao {
     @Autowired
     TechnologyRepository repository;
     @Override
-    public List<Technology> getTechnologies() {
+    public List<Technology> get() {
         return (List<Technology>) repository.findAll();
+    }
+
+    @Override
+    public Technology save(Technology technology) {
+        return repository.save(technology);
     }
 }

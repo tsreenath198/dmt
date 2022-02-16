@@ -14,7 +14,12 @@ public class TechnologyServiceImpl implements TechnologyService {
     TechnologyDao dao;
 
     @Override
-    public List<Technology> getTechnologies() {
-        return dao.getTechnologies();
+    public List<Technology> get() {
+        return dao.get();
+    }
+
+    @Override
+    public Technology save(Technology technology) {
+        return dao.save(technology);
     }
 }

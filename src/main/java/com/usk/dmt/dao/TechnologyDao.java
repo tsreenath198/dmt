@@ -5,5 +5,7 @@ import com.usk.dmt.models.Technology;
 import java.util.List;
 
 public interface TechnologyDao {
-    List<Technology> getTechnologies();
+    List<Technology> get();
+
+    Technology save(Technology technology);
 }
