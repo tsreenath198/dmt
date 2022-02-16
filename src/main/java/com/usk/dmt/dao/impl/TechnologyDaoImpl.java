@@ -16,7 +16,6 @@ public class TechnologyDaoImpl implements TechnologyDao {
     public List<Technology> get() {
         return (List<Technology>) repository.findAll();
     }
-
     @Override
     public Technology save(Technology technology) {
         return repository.save(technology);
