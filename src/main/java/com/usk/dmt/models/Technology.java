@@ -20,14 +20,14 @@ public class Technology{
     @Column
     private String description;
 
-    @Column
+    @Column(name = "active_flag")
     private Integer activeFlag=0;
 
-    @Column
+    @Column(name = "created_date")
     @CreationTimestamp
     private Date createdDate;
 
-    @Column
+    @Column(name = "updated_date")
     @UpdateTimestamp
     private Date updatedDate;
     @Column
