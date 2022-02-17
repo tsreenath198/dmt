@@ -1,4 +1,4 @@
-package com.usk.dmt.models;
+package com.usk.dmt.entities;
 
 import lombok.Data;
 

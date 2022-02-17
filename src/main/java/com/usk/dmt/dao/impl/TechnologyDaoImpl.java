@@ -1,8 +1,8 @@
 package com.usk.dmt.dao.impl;
 
 import com.usk.dmt.dao.TechnologyDao;
-import com.usk.dmt.models.GenericResponse;
-import com.usk.dmt.models.Technology;
+import com.usk.dmt.entities.GenericResponse;
+import com.usk.dmt.entities.Technology;
 import com.usk.dmt.repository.TechnologyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

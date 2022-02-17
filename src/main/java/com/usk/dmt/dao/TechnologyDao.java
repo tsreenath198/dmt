@@ -1,8 +1,8 @@
 package com.usk.dmt.dao;
 
 
-import com.usk.dmt.models.GenericResponse;
-import com.usk.dmt.models.Technology;
+import com.usk.dmt.entities.GenericResponse;
+import com.usk.dmt.entities.Technology;
 
 import java.util.List;
 
