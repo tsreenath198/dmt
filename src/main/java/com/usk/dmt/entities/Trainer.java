@@ -13,7 +13,7 @@ import java.util.List;
 @Entity
 @Table(name = "trainer")
 @Data
-public class Trainer implements Serializable {
+public class Trainer implements Serializable, BaseEntity<Trainer> {
     private static final long serialVersionUID = 1L;
 
     @Id
@@ -54,4 +54,9 @@ public class Trainer implements Serializable {
     @ManyToOne
     private Technology technology;
 
+
+    @Override
+    public Integer getId(){
+        return this.id;
+    }
 }
