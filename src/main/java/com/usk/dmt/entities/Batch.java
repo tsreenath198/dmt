@@ -7,9 +7,9 @@ import java.util.Date;
 
 
 @Entity
-@Table(name = "batch")
+@Table
 @Data
-public class Batch implements Serializable {
+public class Batch implements Serializable, BaseEntity<Batch> {
     private static final long serialVersionUID = 1L;
 
     @Id
@@ -62,4 +62,8 @@ public class Batch implements Serializable {
     private Trainer trainer;
 
 
+    @Override
+    public Integer getId(){
+        return this.id;
+    }
 }

@@ -8,4 +8,5 @@ public interface URIConstants {
 
     String TECHNOLOGY = "/technology";
     String TRAINER = "/trainer";
+    String BATCH = "/batch";
 }
