@@ -7,4 +7,6 @@ public interface URIConstants {
     String DELETE = "/delete";
 
     String TECHNOLOGY = "/technology";
+    String TRAINER = "/trainer";
+    String BATCH = "/batch";
 }

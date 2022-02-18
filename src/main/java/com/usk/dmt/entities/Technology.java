@@ -1,18 +1,16 @@
-package com.usk.dmt.models;
+package com.usk.dmt.entities;
 
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.util.Date;
 
-@Table(name = "technology")
+@Table
 @Data
 @Entity
-public class Technology{
+public class Technology implements BaseEntity<Technology> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -20,16 +18,21 @@ public class Technology{
     @Column
     private String description;
 
-    @Column
+    @Column(name = "active_flag")
     private Integer activeFlag=0;
 
-    @Column
+    @Column(name = "created_date")
     @CreationTimestamp
     private Date createdDate;
 
-    @Column
+    @Column(name = "updated_date")
     @UpdateTimestamp
     private Date updatedDate;
     @Column
     private String name;
+
+    @Override
+    public Integer getId(){
+        return this.id;
+    }
 }
