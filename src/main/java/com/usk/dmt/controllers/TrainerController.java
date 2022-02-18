@@ -2,9 +2,7 @@ package com.usk.dmt.controllers;
 
 import com.usk.dmt.constants.URIConstants;
 import com.usk.dmt.entities.GenericResponse;
-import com.usk.dmt.entities.Technology;
 import com.usk.dmt.entities.Trainer;
-import com.usk.dmt.service.TechnologyService;
 import com.usk.dmt.service.TrainerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

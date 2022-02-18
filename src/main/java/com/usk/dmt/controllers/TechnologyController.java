@@ -1,42 +1,17 @@
 package com.usk.dmt.controllers;
 
 import com.usk.dmt.constants.URIConstants;
-import com.usk.dmt.entities.GenericResponse;
 import com.usk.dmt.entities.Technology;
-import com.usk.dmt.service.TechnologyService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
+import com.usk.dmt.repository.TechnologyRepository;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @CrossOrigin
 @RequestMapping(URIConstants.TECHNOLOGY)
-public class TechnologyController {
-    @Autowired
-    TechnologyService service;
-
-    @GetMapping
-    public ResponseEntity<List<Technology>> load(){
-        return new ResponseEntity<>(service.get(), HttpStatus.OK);
-    }
-
-    @PostMapping
-    public ResponseEntity<Technology> save(@RequestBody Technology technology){
-        return new ResponseEntity<>(service.save(technology),HttpStatus.OK);
-    }
-    @GetMapping("/id")
-    public ResponseEntity<Technology> getById(@RequestParam Integer id) throws Exception {
-        return new ResponseEntity<>(service.getById(id), HttpStatus.OK);
-    }
-    @PutMapping
-    public ResponseEntity<Technology> update(@RequestBody Technology technology){
-        return new ResponseEntity<>(service.update(technology),HttpStatus.OK);
-    }
-    @DeleteMapping
-    public ResponseEntity<GenericResponse> delete(@RequestParam Integer id){
-        return new ResponseEntity<>(service.delete(id),HttpStatus.OK);
+public class TechnologyController extends BaseController<Technology> {
+    public TechnologyController(TechnologyRepository repository) {
+        super(repository);
     }
 }
