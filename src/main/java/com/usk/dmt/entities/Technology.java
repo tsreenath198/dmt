@@ -1,8 +1,6 @@
-package com.usk.dmt.models;
+package com.usk.dmt.entities;
 
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 

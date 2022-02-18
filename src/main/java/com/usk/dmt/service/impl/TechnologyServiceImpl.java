@@ -2,8 +2,8 @@ package com.usk.dmt.service.impl;
 
 
 import com.usk.dmt.dao.TechnologyDao;
-import com.usk.dmt.models.GenericResponse;
-import com.usk.dmt.models.Technology;
+import com.usk.dmt.entities.GenericResponse;
+import com.usk.dmt.entities.Technology;
 import com.usk.dmt.service.TechnologyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

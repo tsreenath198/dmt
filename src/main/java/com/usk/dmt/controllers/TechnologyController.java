@@ -1,14 +1,13 @@
 package com.usk.dmt.controllers;
 
 import com.usk.dmt.constants.URIConstants;
-import com.usk.dmt.models.GenericResponse;
-import com.usk.dmt.models.Technology;
+import com.usk.dmt.entities.GenericResponse;
+import com.usk.dmt.entities.Technology;
 import com.usk.dmt.service.TechnologyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.HttpClientErrorException;
 
 import java.util.List;
 
