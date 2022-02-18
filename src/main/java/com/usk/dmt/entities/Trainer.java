@@ -11,9 +11,9 @@ import java.util.List;
  * The persistent class for the trainer database table.
  */
 @Entity
-@Table(name = "trainer")
+@Table
 @Data
-public class Trainer implements Serializable {
+public class Trainer implements Serializable, BaseEntity<Trainer> {
     private static final long serialVersionUID = 1L;
 
     @Id
@@ -54,4 +54,8 @@ public class Trainer implements Serializable {
     @ManyToOne
     private Technology technology;
 
+    @Override
+    public Integer getId(){
+        return this.id;
+    }
 }
