@@ -19,7 +19,6 @@ import java.util.List;
 public class TrainerController {
     @Autowired
     TrainerService service;
-
     @GetMapping
     public ResponseEntity<List<Trainer>> load(){
         return new ResponseEntity<>(service.load(), HttpStatus.OK);
