@@ -7,10 +7,10 @@ import org.hibernate.annotations.UpdateTimestamp;
 import javax.persistence.*;
 import java.util.Date;
 
-@Table(name = "technology")
+@Table
 @Data
 @Entity
-public class Technology{
+public class Technology implements BaseEntity<Technology> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -30,4 +30,9 @@ public class Technology{
     private Date updatedDate;
     @Column
     private String name;
+
+    @Override
+    public Integer getId(){
+        return this.id;
+    }
 }
