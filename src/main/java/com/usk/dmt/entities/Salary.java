@@ -13,19 +13,8 @@ import java.util.Date;
 @Entity
 @Table(name = "salary")
 @Data
-public class Salary implements Serializable {
+public class Salary extends CommonEntity<Integer> implements Serializable, BaseEntity<Salary> {
     private static final long serialVersionUID = 1L;
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-
-    @Temporal(TemporalType.DATE)
-    @Column(name = "created_date")
-    private Date createdDate;
-
-    @Column(name = "description")
-    private String description;
 
     @Column(name = "employee_id")
     private String employeeId;
@@ -35,10 +24,6 @@ public class Salary implements Serializable {
 
     @Column(name = "salary")
     private float salary;
-
-    @Temporal(TemporalType.DATE)
-    @Column(name = "updated_date")
-    private Date updatedDate;
 
     @Temporal(TemporalType.DATE)
     @Column(name = "year")

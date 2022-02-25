@@ -13,25 +13,11 @@ import java.util.Date;
 @Entity
 @Table(name = "todo")
 @Data
-public class Todo implements Serializable {
+public class Todo extends CommonEntity<Integer> implements Serializable, BaseEntity<Todo> {
     private static final long serialVersionUID = 1L;
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-
-    @Column(name = "active_flag")
-    private int activeFlag;
 
     @Column(name = "category")
     private String category;
-
-    @Temporal(TemporalType.DATE)
-    @Column(name = "created_date")
-    private Date createdDate;
-
-    @Column(name = "description")
-    private String description;
 
     @Column(name = "estimated_time")
     private String estimatedTime;
@@ -42,10 +28,6 @@ public class Todo implements Serializable {
     @Temporal(TemporalType.DATE)
     @Column(name = "task_date")
     private Date taskDate;
-
-    @Temporal(TemporalType.DATE)
-    @Column(name = "updated_date")
-    private Date updatedDate;
 
     //bi-directional many-to-one association to Employee
     @ManyToOne

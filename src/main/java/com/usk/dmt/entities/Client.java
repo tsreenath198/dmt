@@ -14,31 +14,14 @@ import java.util.List;
 @Entity
 @Table(name = "client")
 @Data
-public class Client implements Serializable {
+public class Client  extends CommonEntity<Integer> implements Serializable, BaseEntity<Client> {
     private static final long serialVersionUID = 1L;
-
-    @Id
-    private int id;
-
-    @Column(name = "active_flag")
-    private int activeFlag;
 
     @Column(name = "address")
     private String address;
 
-    @Temporal(TemporalType.DATE)
-    @Column(name = "created_date")
-    private Date createdDate;
-
-    @Column(name = "description")
-    private String description;
-
     @Column(name = "name")
     private String name;
-
-    @Temporal(TemporalType.DATE)
-    @Column(name = "updated_date")
-    private Date updatedDate;
 
     //bi-directional many-to-one association to Contact
     @OneToMany(mappedBy = "client")

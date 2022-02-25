@@ -13,12 +13,8 @@ import java.util.Date;
 @Entity
 @Table(name = "support_interaction")
 @Data
-public class SupportInteraction implements Serializable {
+public class SupportInteraction extends CommonEntity<Integer> implements Serializable, BaseEntity<SupportInteraction> {
     private static final long serialVersionUID = 1L;
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
 
     @Column(name = "count")
     private int count;
@@ -38,6 +34,5 @@ public class SupportInteraction implements Serializable {
 
     @Column(name = "trainer_id")
     private int trainerId;
-
 
 }

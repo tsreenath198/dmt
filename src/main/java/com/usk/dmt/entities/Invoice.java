@@ -13,25 +13,11 @@ import java.util.Date;
 @Entity
 @Table(name = "invoice")
 @Data
-public class Invoice implements Serializable {
+public class Invoice extends CommonEntity<Integer> implements Serializable, BaseEntity<Invoice> {
     private static final long serialVersionUID = 1L;
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-
-    @Column(name = "active_flag")
-    private int activeFlag;
 
     @Column(name = "actual_amount")
     private float actualAmount;
-
-    @Temporal(TemporalType.DATE)
-    @Column(name = "created_date")
-    private Date createdDate;
-
-    @Column(name = "description")
-    private String description;
 
     @Column(name = "invoice_no")
     private int invoiceNo;
@@ -53,9 +39,5 @@ public class Invoice implements Serializable {
 
     @Column(name = "trainee_id")
     private int traineeId;
-
-    @Temporal(TemporalType.DATE)
-    @Column(name = "updated_date")
-    private Date updatedDate;
 
 }

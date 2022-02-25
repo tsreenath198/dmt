@@ -13,25 +13,11 @@ import java.util.Date;
 @Entity
 @Table(name = "support")
 @Data
-public class Support implements Serializable {
+public class Support extends CommonEntity<Integer> implements Serializable, BaseEntity<Support> {
     private static final long serialVersionUID = 1L;
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-
-    @Column(name = "active_flag")
-    private int activeFlag;
 
     @Column(name = "allotted_time")
     private String allottedTime;
-
-    @Temporal(TemporalType.DATE)
-    @Column(name = "created_date")
-    private Date createdDate;
-
-    @Column(name = "description")
-    private String description;
 
     @Column(name = "end_client")
     private String endClient;
@@ -64,10 +50,6 @@ public class Support implements Serializable {
 
     @Column(name = "trainer_id")
     private int trainerId;
-
-    @Temporal(TemporalType.DATE)
-    @Column(name = "updated_date")
-    private Date updatedDate;
 
     //bi-directional many-to-one association to Trainee
     @ManyToOne

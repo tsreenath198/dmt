@@ -13,7 +13,7 @@ import java.util.Date;
 @Entity
 @Table(name = "task_list")
 @Data
-public class TaskList implements Serializable {
+public class TaskList {
     private static final long serialVersionUID = 1L;
 
     @Id

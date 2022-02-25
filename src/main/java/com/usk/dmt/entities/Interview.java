@@ -13,25 +13,11 @@ import java.util.Date;
 @Entity
 @Table(name = "interview")
 @Data
-public class Interview implements Serializable {
+public class Interview extends CommonEntity<Integer> implements Serializable, BaseEntity<Interview> {
     private static final long serialVersionUID = 1L;
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-
-    @Column(name = "active_flag")
-    private int activeFlag;
-
-    @Temporal(TemporalType.DATE)
-    @Column(name = "created_date")
-    private Date createdDate;
 
     @Temporal(TemporalType.DATE)
     private Date date;
-
-    @Column(name = "description")
-    private String description;
 
     @Column(name = "interviewer")
     private String interviewer;
@@ -47,10 +33,6 @@ public class Interview implements Serializable {
 
     @Column(name = "time")
     private String time;
-
-    @Temporal(TemporalType.DATE)
-    @Column(name = "updated_date")
-    private Date updatedDate;
 
     //bi-directional many-to-one association to Client
     @ManyToOne

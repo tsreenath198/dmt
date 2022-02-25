@@ -13,22 +13,11 @@ import java.util.Date;
 @Entity
 @Table(name = "pipeline")
 @Data
-public class Pipeline implements Serializable {
+public class Pipeline extends CommonEntity<Integer> implements Serializable, BaseEntity<Pipeline> {
     private static final long serialVersionUID = 1L;
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
 
     @Column(name = "candidate_name")
     private String candidateName;
-
-    @Temporal(TemporalType.DATE)
-    @Column(name = "created_date")
-    private Date createdDate;
-
-    @Column(name = "description")
-    private String description;
 
     @Column(name = "email")
     private String email;
@@ -38,9 +27,5 @@ public class Pipeline implements Serializable {
 
     @Column(name = "requirements")
     private String requirements;
-
-    @Temporal(TemporalType.DATE)
-    @Column(name = "updated_date")
-    private Date updatedDate;
 
 }

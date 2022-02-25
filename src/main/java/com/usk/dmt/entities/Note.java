@@ -12,24 +12,13 @@ import java.io.Serializable;
 @Entity
 @Table(name = "notes")
 @Data
-public class Note implements Serializable {
+public class Note extends CommonEntity<Integer> implements Serializable, BaseEntity<Note> {
     private static final long serialVersionUID = 1L;
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-
-    @Column(name = "active_flag")
-    private int activeFlag;
-
-    @Column(name = "description")
-    private String description;
 
     @Column(name = "title")
     private String title;
 
     @Column(name = "user")
     private String user;
-
 
 }
