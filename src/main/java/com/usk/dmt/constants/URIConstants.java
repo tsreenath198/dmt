@@ -23,4 +23,5 @@ public interface URIConstants {
     String TODO = "/todo";
     String TRAINEE = "/trainee";
     String USER = "/user";
+    String NOTE = "/note";
 }

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @CrossOrigin
-@RequestMapping(URIConstants.INVOICE)
+@RequestMapping(URIConstants.NOTE)
 public class NoteController extends BaseController<Note> {
     public NoteController(NoteRepository repository) {
         super(repository);
