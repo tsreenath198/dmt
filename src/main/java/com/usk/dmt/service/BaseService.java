@@ -39,4 +39,5 @@ public abstract class BaseService<T extends BaseEntity<T>> {
         get(id);
         repository.deleteById(id);
     }
+
 }
