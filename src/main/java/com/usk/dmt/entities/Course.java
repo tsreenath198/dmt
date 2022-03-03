@@ -19,9 +19,6 @@ public class Course extends CommonEntity<Integer> implements Serializable, BaseE
     @Column(name = "est_hrs")
     private int estHrs;
 
-    @Column(name = "active_flag")
-    private String name;
-
     //bi-directional many-to-one association to Technology
     @ManyToOne
     private Technology technology;

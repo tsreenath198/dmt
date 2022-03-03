@@ -27,6 +27,9 @@ public class UserCred extends CommonEntity<Integer> implements Serializable, Bas
     @Column(name = "password")
     private String password;
 
+   // @Column(name = "confirm_password")
+   // private String confirmPassword;
+
     @Column(name = "phoneno")
     private String phoneno;
 
@@ -36,4 +39,6 @@ public class UserCred extends CommonEntity<Integer> implements Serializable, Bas
     @Column(name = "username")
     private String username;
 
+  //  @Column(name = "address")
+  //  private String address;
 }
